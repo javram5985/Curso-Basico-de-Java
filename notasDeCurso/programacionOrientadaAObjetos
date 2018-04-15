@@ -1,0 +1,163 @@
+Se trata de descomponer un problema en subproblemas y mas subproblemas.
+Definir un Dominio del Problema, Problem Domain: Recopilacion de requisitos del cliente y tener por escrito un alcance
+Ver el problema como un escenario del problema y tratar de simularlo con objetos
+
+Identificando objetos:
+Pueden ser fisicos o conceptuales (un objeto que solamente vive en nuestra mente)
+	Tienen atributos (caracteristicas):
+	1. tamano
+	2. nombre
+	3. forma
+	4. representan el estado de un objeto 
+Los nombres y atributos de los objetos por lo general deben ser sustantivos
+Las operaciones (lo que hacen los objetos) suelen ser verbos o sustantivo y verbo (login, makeReport)
+
+Clase
+	Es el molde que permitirá definir a los objetos. Es la forma en como definimos el objeto para generar mas objetos. Las clases son descriptivas, son plantillas. La clase es el molde que me permite generar mas objetos
+Objeto
+	Es una entidad de la clase, la cual contendrá atributos y comportamientos. Lo más importante para definir un objeto con sus características y diferentes comportamientos, es identificar de manera adecuada el contexto en el que va a existir e interactuar dicho objeto. Primero atributos y luego los comportamientos.
+Domain Problem
+	"Es un modelo conceptual de todos los temas relacionados con un problema específico. En él se describen las distintas entidades, sus atributos, papeles y relaciones, además de las restricciones que rigen el dominio del problema." - Wikipedia
+En resumen,. es importante definir el contexto de los objetos, es decir, sobre que escenarios podemos utilizarlos, y así, crear las clases adecuadas para dichos objetos.
+
+Amazon Viewer
+* Movie
+	* id
+	* title
+	* genre
+	* creator
+	* duration
+	* year
+	* viewed
+	* timeViewed
+* Serie
+	* id
+	* title
+	* genre
+	* author
+	* duration
+	* year
+	* viewed
+	* seasonQuantity
+	* chapters
+* chapter
+	* id
+	* title
+	* duration
+	* year
+	* viewed
+	* timeViewed
+	* seasonNumber
+* Book
+	* id
+	* title
+	* editorial
+	* year
+	* autor
+	* genre
+	* readed
+	* timeReaded
+	* lenguage
+* Magazine
+	* id
+	* title
+	* editorial
+	* year
+
+_import _define a las clases o grupos de clases externas que utilices en tu clase, ésta es una palabra reservada y la verás siempre en el encabezado del archivo de la clase, por ejemplo:
+	import java.util.Date;
+Puedes importar tan solo una clase como en el ejemplo anterior o un paquete de clases:
+	import java.util.*;
+Además que puedes incluir múltiples sentencias import:
+	import java.util.Date;
+	import java.util.Calendar;
+Es una buena práctica especificar la importación completa del paquete de clases *, sin embargo puede causar conflictos con clases que vivan en diferentes paquetes pero tengan el mismo nombre por ejemplo:
+	java.util.Date;
+	java.sql.Date;
+Cuando tengamos algo similar podemos usar la siguiente sintaxis para diferenciar.
+Elegimos qué import conservar:
+	import java.util.Date;
+Y la otra clase la llamamos de la siguiente forma
+	java.sql.Date date = new java.sql.Date();
+En el caso de miembros static que veremos más adelante se importarán de la siguiente forma:
+	import static java.lang.Math.PI; // importa solo la variable estática PI
+	import static java.lang.Math.*; // importa todos los elementos estáticos de la clase
+Por lo tanto podrás usarlos así:
+	double r = cos(PI * theta);
+Cosas que debes saber:
+	Por default siempre se importa java.lang.*
+	No necesitas importar las clases que estén en el mismo paquete.
+
+Metodos: Tiene un valor de regreso explicitamente invocado en su cuerpo usando la palabra reservada return. No regresa valor si es declarado void (omitir return). No puede declararse dentro de otro metodo.
+1. mod. acceso
+	public
+	private:
+	protected
+	default
+	https://www.programarya.com/Cursos/Java/Modificadores-de-Acceso
+2. valor regreso
+	Todos los tipos primitivos (incluyendo void) y de Objeto
+3. nombre
+	Nombre del método, debe de ser un verbo o verbo+sustantivo
+4. argumentos
+	Son las entradas que necesita (o no) un método.
+5. Implementación
+	La funcionalidad que va a realizar el método
+
+Declarando un objeto: Auto miAuto;
+Instanciando un objeto: miAuto = new Auto();
+Declarando e intanciando objeto en una linea: Auto miAuto = new Auto();
+Auto(): es un metodo constructor, crea nuevas instancias de una clase. Tiene el mismo nombre que la clase que inicializa. Usa la palabra reservada new para invocarlo. Usa cero o mas argumentos contenidos dentro de los parentesis que siguen al nombre. No regresa un valor. 
+Utilizando el objeto:
+	Auto miAuto = new Auto();
+	miAuto.marca = "Ferrari";
+	miAuto.mostrarDatos();
+
+Metodos estatico
+El método main siempre es un método estático, ya que cuando se invoca no existen objetos creados con anterioridad porque la ejecución del programa aún no ha comenzado. 
+El tipo main siempre será void (nulo) ya que no es un tipo función que devuelva un valor. Su misión es arrancar la ejecución, no devolver un valor.
+Un método de clase o static es aquel que puede ser invocado sin existir una instancia. Se pueden usar en toda la clase. Puede ser invocado en una clase que no tiene intsancias de la clase. 
+**Porque todos los métodos de main deben ser Estáticos?
+**Los metodos estáticos quiere decir que sólo pueden referenciar variables locales, otros métodos estáticos, miembros de MainClass u otras clases que también son estáticos.
+Un método static no puede acceder a una variable no-static, porque no es una instancia, el método static no sabe nada sobre ningún objeto instanciado.
+La equivalencia es : en static = clase, nonstatic = instancia. Haciendo el método llamado por la JVM (main()) un método static significa que la JVM no tiene que crear una instancia de nuestra clase solo para iniciar el código.
+
+Getters y Setters
+Leer/Escribir especificamente los valores de las variables miembro. 
+Getter: Obtener el valor de la variable, obtener los datos de las variables
+Setter: Asignar o cambiar los datos de las variables
+
+Variables != Objetos
+Variables son entidades muy elementales (muy sencillas), un numero, un caracer, un valor falso o verdadero. 
+Objetos son entidades complejas que pueden estar formadas por la agrupacion de muchas variables y metodos
+Los tipos de datos primitivos (variables) van a estar almacenados en el Stack (variables con vida corta)
+Los objetos van a estar almacenados en el heap
+
+Herencia
+En algunas circunstancias, es necesario utilizar el estado y comportamiento de una clase en conjunto con otras clases. Se establece una relacion padre e hijo. La idea de la herencia es permitir la creacion de nuevas clases basadas en clases existentes.
+Una subclase hereda todos los miembros de su super clase que estan declarados como public o protected.
+Super: Indica que una variable o un metodo es de la clase Padre (superclase)
+This: Permite especificar que la variable que esta senalando es de la misma clase en la que se usa.
+
+Todas las entidades están heredando de la clase Object, que tiene métodos definidos. Con la anotación @Override podemos sobreescribir un método de la clase padre, en este caso Object. Esto lo vamos a utilizar para obtener el título, género, año, creador y duración de la película. Cada vez que imprimas el objeto Movie el programa va a arrojar toda la información de la película.
+Sobreescritura: Cuando una clase hereda de otra, y en esta clase hija se redefine un método con una implementación distinta a la de la clase padre. Los metodos marcados como final o static no se pueden sobreeescribir.
+Polimorfismo: Posibilidad de construir varios métodos con el mismo nombre, pero con relación a la clase a la que pertenece cada uno, con comportamientos diferentes.
+
+Interfaces
+Es un tipo de referencia muy similar a una clase que podria contener solo constantes, definiciones de metodos, metodos con modificador de acceso default. Se establece la forma de una clase (nombres de metodos, listas de argumentos y tipos de retorno, pero no bloques de codigo)
+
+Colecciones
+Se diferencian de los arrays en que su tamano no es fijo, son dinamicos. Se pueden realizar operaciones de anadir, eliminar, obtener, encontrar o recorrer una coleccion. Las colecciones son solo para almacenar objetos, no almacenan variables primitivas (int)
+List: Es una interfaz que extiende de la interfaz Collection, se utiliza para almacenar colecciones de objetos, proviene del paquete java.util. Colecciones ordenadas y con elementos repetidos. 
+	- add(Objet o) añade un objeto al final de la lista
+	- add(int indice, Objet o):anade el obejeto a la lista en la pocicion indicada
+	- get(int indice) devuelve el objeto de la lista de la posicion inidicada.
+	- remove(int indice) elimina el objeto a partir del indice dado
+	- clear() elimina los elementos de la lista
+	- indexOf(Objet o) devuelve la posicion de la primera vez que un elemento coincida con el objeto pasado por parametro. Si el elemnto no se encuentra devuelve -1. tu le pasas un objeto lo busca y te devuelve el indice donde esta hubicado ese objeto.
+	- lastIndexOf(Objet o) devuelve la posicion de la ultima vez que un elemento coincida con el objeto pasado por parametro. Si el elemento no se encuentra devulve -1. tu le pasas un objeto lo busca y te devuelve el indice donde esta hubicado ese objeto, pero en este caso de la ultima vez
+	- size() devuelve el nimero de elementos de la lista.
+	- contains(Object o) devuelve verdadero si en la lista aparece el objeto pasado por parametro, para lo cual utiliza intrinsecamente el metodo equals().	
+Set: Los elementos pueden o no estar ordenados y no tiene elementos repetidos.
+	- ArrayList: Almacenara un arreglo de objeto y esta puede cambiar el tamaño tiene una capacidad que crece automaticamente. No funciona en datos primitivos.
+	- Vector: Un vector es similar a un array, la diferencia estriba en que un vector usa hilos y esta sincronizado y un array no. 

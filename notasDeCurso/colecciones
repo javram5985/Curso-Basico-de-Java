@@ -1,0 +1,49 @@
+En Java existen colecciones que podemos usar para muchos tipos de casos, comenzaremos aprendiendo su árbol familiar:
+
+
+Como podemos observar el elemento más alto es la interfaz Collection, para lo cual, partiendo de su naturalidad de interface, entendemos que tiene una serie de métodos “básicos” dónde su comportamiento será definido a medida que se vaya implementando en más elementos. De ella se desprenden principalmente las interfaces Set y List.
+
+La interface Set tendrá las siguientes características:
+
+Almacena objetos únicos, no repetidos.
+La mayoría de las veces los objetos se almacenarán en desorden.
+No tenemos índice.
+La interface List tiene éstas características:
+
+Puede almacenar objetos repetidos.
+Los objetos se almacenan en orden secuencial.
+Tenemos acceso al índice.
+Si seguimos analizando las familias tenemos que de Set se desprenden:
+
+Clase HashSet
+Interfaz SortedSet y de ella la clase TreeSet.
+HashSet los elementos se guardan en desorden y gracias al mecanismo llamado hashing (obtiene un identificador del objeto) permite almacenar objetos únicos.
+
+TreeSet almacena objetos únicos, y gracias a su estructura de árbol el acceso es sumamente rápido.
+
+Ahora si analizamos la familia List, de ella se desprenden:
+
+Clase ArrayList puede tener duplicados, no está sincronizada por lo tanto es más rápida
+Clase Vector es sincronizada, los datos están más seguros pero es más lento.
+Clase LinkedList, puede contener elementos duplicados, no está sincronizada (es más rápida) al ser una estructura de datos doblemente ligada podemos añadir datos por encima de la pila o por debajo.
+
+Como pudiste notar hay un elemento que pareciera no estar incluída en la familia, me refiero a la interfaz Map, está tendrá como naturaleza tener los componentes Key, Value, donde el Value será el objeto insertado y el Key será el valor clave para obtenerlo.
+
+De Map se desprenden algunas otras interfaces y clases 
+Para el map creo que son interesantes y utiles las interfaces ConcurrentMap y SortedMap:
+
+ConcurrentMap: Define un map sincronizado por lo cual es util si estamos trabajando con hilos y queremos conservar la consistencia de los elementos.
+
+SortedMap: Define un map que permite ordenar los elementos en base al valor de su key. Si quisieramos usar otro orden se puede usar un Comparator.
+
+Entre las clases veo utiles las siguientes:
+
+HashMaps: Creo es de los mas usados. Es un map no sincronizado que permite guardar valores nulos y un key nulo. Este tiene una particularidad y es que no solo se utiliza el valor del key para guardar/recuperar si no tambien el valor de su hash, que es un numero calculado que indica una posición donde se indexa el valor a guardar. Lo cual ayuda a recuperar los datos mas rapido.
+
+TreeMap: Nos permite tener un map con una estructura de arbol binario de busqueda equilibrado lo cual nos permite saber cual sera el maximo tiempo que le tomara guardar, borrar y eliminar un elemento. Para el orden se usa el del key o un Comparator que creemos. No esta sincronizada.
+
+Properties: Que nos permite tener un conjunto de pares clave-valor las cuales se pueden cargar desde un stream ( que supongo se explicara en clases siguientes). Me agrada que facilita la tarea de leer y recuperar la info de un archivo .properties y que es una clase ya sincronizada.
+
+Crear librerias en java .jar: click derecho export.
+Agregar la libreria .jar al proyecto: Build Path, Add external archives
+Properties, java build path, libraries, classpath

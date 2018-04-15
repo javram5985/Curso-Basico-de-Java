@@ -1,0 +1,11 @@
+Control de Flujo
+Podemos controlar el flujo usando sentencias condicionales, ciclos, etc. 
+
+La sentencia if/else
+	La sentencia if/else nos permite ejecutar un bloque de código o no, dependiendo de una condición que se evalúa justo antes de este bloque.
+	Esta condición se evalúa a un valor booleano, es decir, su resultado solo puede tomar dos valores, true o false.
+La sentencia switch
+	Esta sentencia permite elegir múltiples caminos a seguir por el flujo de ejecución de nuestro programa.
+	En este caso, el camino a seguir se selecciona basándose en el valor de una expresión que se evalúa a un valor entero
+Bucle for y for each
+Bucle for anidados

@@ -1,0 +1,67 @@
+- Java nos permite escribir menos código, de forma que podemos tener código de calidad y mejorar tus practicas de codificación.
+- Java es uno de los lenguajes mas utilizados a nivel mundial, el apocalipsis de Java, ¿qué pasaría si Java desapareciera? hay muchos sistemas que están construidos con Java, incluso en Adroid y Kotlin es necesario Java para que subsistan.
+- Empresas como Google, Amazon, Uber, empresas financieras o banca usan Java, asi que tus posibilidades de encontrar trabajo son enormes, muchas empresas necesitan personas que sepan utilizar este lenguaje.
+- Java cuenta con su propio sistema de certificaciones Especialista certificado en Java y por lo tanto ahora vales mas.
+
+- Java es un lenguaje de programación de alto nivel, esto significa que tiene menos contacto con el hardware.
+- Java tiene la filosofia: Write Once Run Anywhere WORA, quiere decir que cualquier código que escribas lo escribirás solo una vez pero lo podras ejecutar siempre que lo necesites.
+- Java es simple --> esta basado en C++, garbage collector para hacer eficiente el lenguaje, orientado a objetos, distribuido, multihilo.
+- Caracteristicas de Java
+	Simple
+		Basado en C, la sitaxis es muy parecida a C y C++(OOP)
+		Se hereda de una sola clase
+		Clase String, que no existe en C ni en C++
+		Garbage Colector, se encarga de remover los objetos que no
+		estan en uso para liberarlos de la memoria para hacer mas
+		eficiente el lenguaje
+	Orientado a Objetos
+		Es un paradigma, tiene su teoria, filosofia. Muy importante
+		aprenderla como tal.
+		Java como tal es Lenguaje Oriendato a Objetos.
+
+	Distribuido
+		Diseñado para trabajar con protocolos TCP/IP, HTTP, FTP, etc.
+		Todo lo necesario para trabajar en ambientes de redes.
+	
+	Multihilo
+		Tenemos mayor procesamiento en las computadoras o telefonos.
+		Un Ejemplo, la clase Thread para trabajar con procesos que
+		ocurren al mismo tiempo al paralelo, dos o mas procesos.
+
+	Arquitectura Neutral
+		Corre no solo en un ambiente de trabajo(no solo Windows o
+		Linux)
+
+	Portable
+		Corre en varios sistemas operativos.
+
+	Alto desempeño
+		Es Compilado e Interpretado que lo hace tener un alto
+		desempeño
+
+	Seguro
+		Gracias a la Maquina Virtual (JVM)
+		El codigo no esta expuesto a nadie ya que a la hora de compilar
+		el codigo lo convierte a ByteCode(archivo .class) y a la hora de
+		correr el programa no lee el codigo fuente.
+
+Para descargar Java se necesitan dos componentes:
+	JDK: Nos permite desarrollar nuevas aplicaciones en java. Es un software que provee herramientas de desarrollo para la creación de programas en java. Puede instalarse en una computadora local o en una unidad de red.
+	JRE: Permite ejecutar todo lo que se desarrolló en JDK. Es la maquina virtual de JAVA.
+
+Instalacion de Java:
+	1. Verificar si ya lo tenemos instalado: java -version, javac
+	2. Links:
+		http://www.oracle.com/technetwork/java/javase/downloads/jre9-downloads-3848532.html
+		http://www.oracle.com/technetwork/java/javase/downloads/jdk9-downloads-3848520.html
+	3. Luego de la instalacion
+		- Con la combinación de teclas: (Windows + Pausa) se abre la ventana “Environment Variables”
+		- Una vez abierto, se selecciona “Environment Variables”
+		- Cuando aparezca la ventana de propiedades del sistema, se procede a crear una variable nueva dado el caso en que NO exista una variable llamada      “JAVA_HOME”, si no la tienes creada, se procede a crearla presionando click sobre el botón “Nueva”
+		- Ubicamos donde está instalado el JDK en nuestro sistema operativo:
+		- Copiamos esa path y la ingresamos como valor en la variable de entorno que tenemos pendiente de crear “JAVA_HOME” y como valor esa path: “C:\Program Files\Java\jdk-9.0.4”
+		- Una vez creada la variable damos click en el botón aceptar
+
+Para compilar y ejecutar el programa en la consola:
+	1. javac HolaMundo.java
+	2. java HolaMundo

@@ -1,0 +1,108 @@
+1. Si desarrollara un videojuego estilo Mario Bros donde tuviera que ir ganando monedas que valen 2 puntos ¿cuál sería la mejor instrucción para llevar el conteo acumulado de monedas en código java?
+x += 2
+
+2.¿Qué significa sobrecargar (overload) un método?
+Crear un metodo con el mismo nombre pero diferentes argumentos
+
+3. Este elemento hace a Java poderoso pues es quien le da la portabilidad con otros Sistemas Operativos.
+La Java Virtual Machine
+
+4. ¿Qué imprime el siguiente código fuente?
+int x = 1;  
+while (x <= 10)   
+    System.out.println(++x);
+Los Valores del 2 al 11
+
+5. Windows tiene su propia extensión de archivos ejecutables los .exe, ¿cuál es el que usa Java? MALA
+.java
+
+6. Cada lenguaje de programación define su código fuente en archivos con extensiones especiales por ejemplo: Python .py, JavaScript .js, Go .go, ¿Cuál será la extensión para Java?
+.java
+
+7. Si los arreglos son objetos, ¿quiere decir que hereda todos los métodos de la clase object?
+verdadero
+
+8. Tengo un programa que tiene declarada la variable PI para calcular el área de un círculo, uno de mis requerimientos es que la variable PI se mantenga inmutable, es decir que no cambie su valor y que sea constante todo el tiempo, ¿cuál de estas palabras clave de java es la más adecuada?
+final
+
+9. Desarrollaste un programa de ventas donde una de las cosas que tienes que imprimir es el ticket de un usuario, de acuerdo al análisis que hiciste, creaste la interfaz Printable. ¿Cómo la asociarías a la clase Ticket?
+public class Ticket implements Printable
+
+10. Si estoy analizando el objeto cuenta ¿Cuáles son los elementos a los que debo poner atención para definirlo?
+sus atributos y metodos
+
+11. ¿Cuál es el resultado de la siguiente expresión? MALA
+int i = 7;
+char c = ‘w’; 
+System.out.println((i >= 6) && (c == ‘w’));
+false
+
+12. Si tuvieras un sistema para una escuela donde el cupo máximo para un grupo son 10 estudiantes ¿cómo añadirías un estudiante en el 4º lugar? MALA
+Student[] students = new Student[10];
+students[4] = new Student("Daniel Martinez");
+
+13. Tenemos un programa donde estamos asignando un password a una cuenta de usuario esta debe ser de 6 caracteres y alfanumérica. Existe el objeto user el cuál tiene el atributo password. ¿Cuál sería el mejor lugar para poner la validación de la contraseña?
+En los metodos getters y setters
+
+14. Si tengo un sistema que correrá en un microcontrolador este tiene memoria limitada. Necesito asignar una edad ¿qué tipo de dato usarías?
+byte
+
+15. Si estoy creando un programa para una tienda que vende ropa y artículos electrónicos, estos cumplen con una garantía de satisfacción donde el usuario tiene la posibilidad de devolver cualquier producto excepto un tipo de playeras que proviene de la familia Ropa, estas como son personalizadas y graban tu nombre en ellas no pueden ser devueltas. ¿Cómo implementarías el método hacerDevolucion() en los productos específicos?
+Crearia una interfaz, esta puede implementarse a cualquier clase que si le corresponda este comportamiento
+
+16. Si tuvieras que desarrollar un programa para una empresa en la que se planea integrar nuevos módulos en el futuro pues se contempla que estará en constante crecimiento, ¿cuál es la mejor característica de Java que hace esto posible?
+Java es un lenguaje orientado a objetos
+
+17. Si eres Programador (si no también), imagina que eres Empleado de una compañía de desarrollo y al mismo tiempo tienes un hobby como por ejemplo, ser Geek. si abstraemos este ejemplo en modo de clases, tendremos la Clase Programmer que puede comportarse como Employee y al mismo tiempo como Geek. ¿Qué elemento usarías para demostrar esto? MALA
+Implementacion multiple de herencia
+
+18. ¿En cuál de estos códigos se está mostrando que un Manager hereda de un Employee?
+public class Manager extends Employee
+
+19. Hice un programa que tiene la clase Account esta tiene un atributo name que describe el nombre de la cuenta. Cuando quiero crear un objeto de tipo Account el dato requerido en el constructor es name por lo tanto, cuando entre ese dato necesitaré asignarlo al atributo name de la clase, tendrás algo así:
+class Account {    
+   private String name;
+   public Account(String name){   
+       name = name; //error
+   }
+}
+¿Cuál sería la forma de conseguir esto, sin que muestre el error?
+this.name = name
+
+20. Si quisiera recorrer una colección de objetos muy rápido ¿Cuál es el mejor bucle a usar?MALA
+for
+
+21. ¿Cuál es la sentencia para declarar e indicar el tamaño de un arreglo?
+Foo f[] = new Foo[20]
+
+22. Si quisieras hacer un programa que reciba caracteres e imprima su código ascii, cómo tendría que declarar el cast:
+int ascii = (int) caracter
+
+23. ¿Qué significa instanciar una clase?
+Crear un objeto a partir de la clase
+
+24. Hice un programa que tiene la clase padre Product este tiene un atributo store el cual es el identificador de la tienda que pertenece el producto, si desde la clase hija Television quisiera conocer la store a la que pertenece este tipo de producto ¿cuál sería una forma de llamar el dato store? MALA
+Product.store();
+
+25. ¿Por qué cuando tengo este código se ejecuta todo lo que está dentro del método main?
+Porque el metodo main es el punto de entrada de una aplicacion java
+
+26. Cómo se llama el lenguaje que produce Java después de la compilación para que la máquina virtual genere el lenguaje máquina de cada Sistema Operativo
+Byte code
+
+27. En un sistema de autos para lograr hacer login el usuario/vendedor debe cumplir con tener perfil de vendedor y además tener al menos un auto asignado a vender ¿Cuál será la mejor condición para esto?
+if(user.getProfile().equals(seller) && (user.getAutos().size() > 0))
+
+28. ¿Cual es el resultado del siguiente programa?
+int i=1, j=2, k=3, m=2; 
+System.out.println ((j >= i) || (k == m));
+true
+
+29. ¿Cuál es el resultado del siguiente código? MALA
+byte i = 1;
+byte j = 1;
+byte k = i+j;
+2
+
+30. Si estoy creando un programa para una tienda de tecnología y he analizado el producto computadora ya he identificado sus atributos y métodos, por lo tanto lo he puesto en términos de en un objeto, si quisiera crear más productos/objetos a partir del análisis que hice ¿qué es lo que tendría que crear? MALA
+Un array pues me permite almacenar muchos objetos

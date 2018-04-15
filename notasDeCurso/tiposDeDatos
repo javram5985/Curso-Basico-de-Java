@@ -1,0 +1,85 @@
+Variable: Un espacio de memoria al que le asignamos un contendido, puede ser un valor numerico, de tipo caracter o cadena de caracteres
+
+Tipos primitivos: Los tipos de datos primitivos se escriben iniciando con letra minúscula. Dentro de los tipos primitivos tenemos byte, short, int, long.
+En Java existen ocho tipos de datos primitivos que se pueden clasificar en:
+	Números enteros (byte, short, int, long).
+	Números reales (float, double).
+	Carácter (char).
+	Booleano o lógico (boolean).
+De todos ellos, salvo del tipo boolean que únicamente puede ser true o false, en la siguiente tabla se muestran sus posibles valores mínimo y máximo:
+Lista de tipos de datos primitivos del lenguaje Java
+	Tipo			Tamaño			Valor mínimo					Valor máximo						Tipo de Numero
+	byte			8 bits				-128							127									entero
+	short 			16 bits				-32768							32767								entero
+	int				32 bits				-2147483648						2147483647							entero
+	long			64 bits				-9223372036854775808			9223372036854775807					entero
+	float			32 bits				-3.402823e38					3.402823e38							decimal
+	double			64 bits				-1.79769313486232e308 			1.79769313486232e308				decimal
+	char			16 bits				‘\u0000’						‘\uffff’							texto
+Nota: un dato de tipo carácter se puede escribir entre comillas simples, por ejemplo ‘a’, o también indicando su valor Unicode, por ejemplo ‘\u0061’.
+
+Reglas que Java tiene para la declaración de variables:
+	Java es sensible a mayúsculas y minúsculas.
+	Pueden comenzar con _ o $
+	No pueden comenzar con numeros
+	Las constantes se escriben en Mayúsculas y contienen "_" (ej. VALOR, VALOR_MAXIMO)
+	CamelCase -Uper Camel Case para los nombres de las clases y nombres de archivos, es decir que la primera letra que escriba debe ser mayúscula. Lower Camel Case - para nombres de variables, objetos y metodos, quiere decir que la primera letra que escriba debe ser en minúscula.
+
+En la programación hay situaciones en las que se necesita cambiar el tipo de dato en otro. Para hacerlo podemos usar cast es decir que tomamos un dato y lo transformamos en otro tipo de datos. Se puede realizar el cast para todos los tipos de datos primitivos, con excepción de boolean, por la naturalidad del tipo de dato boolean. Ejemplo:
+	double d = 86.45;
+	int i = (int) d; el parentesis (int) es el casteo, es decir, en este ejemplo el double se convertira en int
+
+Los arreglos se pueden definir como objetos en los que podemos guardar mas de una variable. 
+
+Declaración:
+La estructura de declaración de un arreglo es la siguiente:
+	tipo_dedato [] nombre_variable; //tambien puede declararse “tipo_dedato nombre_variable[];”
+	ejemplos:
+	String array[]; //donde array es un arreglo que guardara variables tipo Strings
+	double array2[]; //donde array2 es un arreglo que guardara variabels tipo double
+	int [] array3; //donde array3 es un arreglo que guardara variables tipo int(numericas)
+	nombreVariable = new TipoDato[capacidad]
+
+Tipos de operadores en Java
+	Ya que tenemos variables, las podemos usar para crear expresiones que retornen valores
+		Operadores				Nombre 				Ejemplo
+			+					Adicion				a+b
+			-					Substraccion		a-b	
+			*					Multiplicacion		a*b
+			/					Division			a/b
+			%					Modulo				a%b
+	Operadores de asignacion
+		Operador 				Aplicacion 				Desglose
+		+= 						a += b 					a = a + b
+		-=						a -= b 					a = a - b
+		*=						a *= b 					a = a * b
+		/= 						a /= b 					a = a / b
+		%= 						a %= b 					a = a % b
+	Operadores de incremento
+		Operador 				Nombre 					Ejemplo 			Desglose
+		++						incremento				i++					i = i + 1
+		--						decremento				i--					i = i - 1
+
+Operador Terneario
+	boolean n = (p < q) ? true: false;
+	Lo de arriba es lo mismo que escribir asi:
+	int n;
+	if(p < q)
+		n = true;
+	else
+		n = false;
+
+Operadores Relacionales
+	Operadores				Nombre 					Ejemplo
+		<					Menor que				a < b
+		>					Mayor que 				a > b	
+		<=					Menor o igual que		a <= b
+		>=					Mayor o igual que		a >= b
+
+Operadores Logicos
+	Operadores				Nombre 					Ejemplo
+		&&					AND 					a && b
+		||					OR 		 				a || b	
+		!					NOT 					!a
+			
+			

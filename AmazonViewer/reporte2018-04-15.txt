@@ -1,0 +1,21 @@
+:: MOVIE ::
+Title: Movie 1
+Genre: Genre 1
+Year: 2018
+Creator: Creator 1
+Duration: 120
+
+:: MOVIE ::
+Title: Movie 4
+Genre: Genre 4
+Year: 2021
+Creator: Creator 4
+Duration: 120
+
+:: MOVIE ::
+Title: Movie 5
+Genre: Genre 5
+Year: 2022
+Creator: Creator 5
+Duration: 120
+
